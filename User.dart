@@ -6,7 +6,8 @@ int getNum(int min, int max) {
 }
 
 class Unit{
-  int xp = 0; //경험치
+  int xp;//경험치
+  Unit(this.xp);
 
   void getXp(int _xp){
     xp = xp + _xp;
@@ -15,7 +16,7 @@ class Unit{
 }
 
 // abstract class AttackType{
-//
+  /* abstract의 특징은 기능을 정의하지 않음.*/
 //   void punch();
 //
 //   void kick();
@@ -33,7 +34,8 @@ class User extends Unit{
   int def; //방어력
   late int xp;
 
-  User(this.name, this.hp, this.minDmg, this.maxDmg, this.def);
+  User({required this.name, required this.hp,required this.minDmg,required this.maxDmg,required this.def, required int xp})
+      :super(xp);
 
   //기능
   //die
@@ -59,4 +61,6 @@ class User extends Unit{
     if (dmg < 0) dmg = 0;
     hp -= dmg;
   }
+  
+
 }
