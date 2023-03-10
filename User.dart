@@ -14,7 +14,7 @@ class Unit{
 
 }
 
-// class abstract AttackType{
+// abstract class AttackType{
 //
 //   void punch();
 //
