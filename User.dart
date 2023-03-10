@@ -21,11 +21,6 @@ class Unit{
 //   void kick();
 // }
 
-// class Normal{
-//   void hello(){
-//     print("hello");
-//   }
-// }
 
 //플레이어 클래스 정의
 class User extends Unit{
